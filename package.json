@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "framer-motion": "^12.23.12",
+>>>>>>> 1d89b58 (Initial commit - current project)
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
