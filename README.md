@@ -1,4 +1,3 @@
-@"
 # Zan32 — P2P WebRTC Chat
 
 ## Folders
