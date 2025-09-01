@@ -1,12 +1,27 @@
-# React + Vite
+@"
+# Zan32 — P2P WebRTC Chat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Folders
+- frontend/ — React + Vite UI
+- signaling/ — Node WebSocket signaling server
+- client-rust/ — Rust WebRTC client (host/join)
 
-Currently, two official plugins are available:
+## Quick start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Signaling
+cd signaling
+npm i
+npm start   # runs server.js on :8080
 
-## Expanding the ESLint configuration
+### Expose (dev)
+ngrok http 8080
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Rust client
+cd client-rust
+cargo build --release
+
+# PowerShell (example)
+`$env:WS_URL="wss://xxxxx.ngrok-free.app"`
+.\target\release\p2p-webrtc.exe --host 123456
+.\target\release\p2p-webrtc.exe --join 123456
+"@ | Out-File -Encoding utf8 README.md
