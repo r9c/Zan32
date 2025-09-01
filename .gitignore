@@ -1,0 +1,18 @@
+# Rust
+/target/
+/client-rust/target/
+**/*.rs.bk
+
+# Node
+/frontend/node_modules/
+/signaling/node_modules/
+**/npm-debug.log
+
+# Vite/React
+/frontend/dist/
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
